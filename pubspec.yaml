@@ -17,12 +17,5 @@ dev_dependencies:
     sdk: flutter
 
 flutter:
-  assets:
-    - assets/travis_logo.png
-    - assets/travis_logo_rainbow.png
-    - assets/travis_logo_woman.png
-    - assets/travis_logo_woman_rainbow.png
 
   uses-material-design: true
-  fonts:
-    - asset: assets/icons/MyFlutterApp.ttf
