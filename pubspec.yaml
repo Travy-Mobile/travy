@@ -19,3 +19,12 @@ dev_dependencies:
 flutter:
 
   uses-material-design: true
+  fonts:
+    - family: travyGlyphs
+      fonts:
+       - asset: assets/fonts/travyGlyphs.ttf
+    - family: ReemKufi
+      fonts: 
+        - asset: assets/fonts/ReemKufi-Regular.ttf
+  assets:
+    - logo.png
