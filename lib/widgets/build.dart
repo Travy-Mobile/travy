@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:travy/models/models.dart';
 
 class BuildWidget extends StatelessWidget {
-  
+
   final BuildModel buildToShow;
 
   BuildWidget({this.buildToShow});
@@ -49,8 +49,8 @@ class BuildWidget extends StatelessWidget {
                   padding: EdgeInsets.only(top: 5),
                   child: Container(
                     height: 10,
-                    color: _showBuildColor(),
-                  ))
+                    color: _showBuildColor(buildToShow.state),
+              ))
             ],
           ),
         ),
@@ -58,10 +58,10 @@ class BuildWidget extends StatelessWidget {
     );
   }
 
-  _showBuildColor() {
-    if (buildToShow.state == "passed") {
+  _showBuildColor(String state) {
+    if (state == "passed") {
       return Color(int.parse("0xFF39AA56"));
-    } else if (buildToShow.state == "failed") {
+    } else if (state == "failed") {
       return Color(int.parse("0xFFDB4545"));
     } else {
       return Color(int.parse("0xFFEDDE3F"));
