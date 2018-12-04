@@ -4,8 +4,8 @@ import 'package:built_collection/built_collection.dart';
 
 part 'build.g.dart';
 
-abstract class Build implements Built<Build, BuildBuilder> {
-  static Serializer<Build> get serializer => _$buildSerializer;
+abstract class BuildModel implements Built<BuildModel, BuildModelBuilder> {
+  static Serializer<BuildModel> get serializer => _$buildModelSerializer;
 
   int get id;
 
@@ -13,6 +13,6 @@ abstract class Build implements Built<Build, BuildBuilder> {
 
   int get duration;
 
-  Build._();
-  factory Build([updates(BuildBuilder b)]) = _$Build;
+  BuildModel._();
+  factory BuildModel([updates(BuildModelBuilder b)]) = _$BuildModel;
 }

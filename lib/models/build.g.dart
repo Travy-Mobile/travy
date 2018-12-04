@@ -19,16 +19,16 @@ part of 'build.dart';
 // ignore_for_file: unnecessary_new
 // ignore_for_file: test_types_in_equals
 
-Serializer<Build> _$buildSerializer = new _$BuildSerializer();
+Serializer<BuildModel> _$buildModelSerializer = new _$BuildModelSerializer();
 
-class _$BuildSerializer implements StructuredSerializer<Build> {
+class _$BuildModelSerializer implements StructuredSerializer<BuildModel> {
   @override
-  final Iterable<Type> types = const [Build, _$Build];
+  final Iterable<Type> types = const [BuildModel, _$BuildModel];
   @override
-  final String wireName = 'Build';
+  final String wireName = 'BuildModel';
 
   @override
-  Iterable serialize(Serializers serializers, Build object,
+  Iterable serialize(Serializers serializers, BuildModel object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[
       'id',
@@ -45,9 +45,9 @@ class _$BuildSerializer implements StructuredSerializer<Build> {
   }
 
   @override
-  Build deserialize(Serializers serializers, Iterable serialized,
+  BuildModel deserialize(Serializers serializers, Iterable serialized,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = new BuildBuilder();
+    final result = new BuildModelBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -74,7 +74,7 @@ class _$BuildSerializer implements StructuredSerializer<Build> {
   }
 }
 
-class _$Build extends Build {
+class _$BuildModel extends BuildModel {
   @override
   final int id;
   @override
@@ -82,32 +82,32 @@ class _$Build extends Build {
   @override
   final int duration;
 
-  factory _$Build([void updates(BuildBuilder b)]) =>
-      (new BuildBuilder()..update(updates)).build();
+  factory _$BuildModel([void updates(BuildModelBuilder b)]) =>
+      (new BuildModelBuilder()..update(updates)).build();
 
-  _$Build._({this.id, this.state, this.duration}) : super._() {
+  _$BuildModel._({this.id, this.state, this.duration}) : super._() {
     if (id == null) {
-      throw new BuiltValueNullFieldError('Build', 'id');
+      throw new BuiltValueNullFieldError('BuildModel', 'id');
     }
     if (state == null) {
-      throw new BuiltValueNullFieldError('Build', 'state');
+      throw new BuiltValueNullFieldError('BuildModel', 'state');
     }
     if (duration == null) {
-      throw new BuiltValueNullFieldError('Build', 'duration');
+      throw new BuiltValueNullFieldError('BuildModel', 'duration');
     }
   }
 
   @override
-  Build rebuild(void updates(BuildBuilder b)) =>
+  BuildModel rebuild(void updates(BuildModelBuilder b)) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  BuildBuilder toBuilder() => new BuildBuilder()..replace(this);
+  BuildModelBuilder toBuilder() => new BuildModelBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is Build &&
+    return other is BuildModel &&
         id == other.id &&
         state == other.state &&
         duration == other.duration;
@@ -121,7 +121,7 @@ class _$Build extends Build {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('Build')
+    return (newBuiltValueToStringHelper('BuildModel')
           ..add('id', id)
           ..add('state', state)
           ..add('duration', duration))
@@ -129,8 +129,8 @@ class _$Build extends Build {
   }
 }
 
-class BuildBuilder implements Builder<Build, BuildBuilder> {
-  _$Build _$v;
+class BuildModelBuilder implements Builder<BuildModel, BuildModelBuilder> {
+  _$BuildModel _$v;
 
   int _id;
   int get id => _$this._id;
@@ -144,9 +144,9 @@ class BuildBuilder implements Builder<Build, BuildBuilder> {
   int get duration => _$this._duration;
   set duration(int duration) => _$this._duration = duration;
 
-  BuildBuilder();
+  BuildModelBuilder();
 
-  BuildBuilder get _$this {
+  BuildModelBuilder get _$this {
     if (_$v != null) {
       _id = _$v.id;
       _state = _$v.state;
@@ -157,22 +157,22 @@ class BuildBuilder implements Builder<Build, BuildBuilder> {
   }
 
   @override
-  void replace(Build other) {
+  void replace(BuildModel other) {
     if (other == null) {
       throw new ArgumentError.notNull('other');
     }
-    _$v = other as _$Build;
+    _$v = other as _$BuildModel;
   }
 
   @override
-  void update(void updates(BuildBuilder b)) {
+  void update(void updates(BuildModelBuilder b)) {
     if (updates != null) updates(this);
   }
 
   @override
-  _$Build build() {
+  _$BuildModel build() {
     final _$result =
-        _$v ?? new _$Build._(id: id, state: state, duration: duration);
+        _$v ?? new _$BuildModel._(id: id, state: state, duration: duration);
     replace(_$result);
     return _$result;
   }

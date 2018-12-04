@@ -6,7 +6,7 @@ import 'dart:convert';
 
 class Api {
   
-  Future<List<Build>> fetchBuilds() async{
+  Future<List<BuildModel>> fetchBuilds() async{
     String url = "https://api.travis-ci.org/builds";
     
     var response = await http.get(url, headers: {

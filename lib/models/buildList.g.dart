@@ -33,7 +33,8 @@ class _$BuildListSerializer implements StructuredSerializer<BuildList> {
     final result = <Object>[
       'buildsList',
       serializers.serialize(object.buildsList,
-          specifiedType: const FullType(List, const [const FullType(Build)])),
+          specifiedType:
+              const FullType(List, const [const FullType(BuildModel)])),
     ];
 
     return result;
@@ -53,8 +54,8 @@ class _$BuildListSerializer implements StructuredSerializer<BuildList> {
         case 'buildsList':
           result.buildsList = serializers.deserialize(value,
                   specifiedType:
-                      const FullType(List, const [const FullType(Build)]))
-              as List<Build>;
+                      const FullType(List, const [const FullType(BuildModel)]))
+              as List<BuildModel>;
           break;
       }
     }
@@ -65,7 +66,7 @@ class _$BuildListSerializer implements StructuredSerializer<BuildList> {
 
 class _$BuildList extends BuildList {
   @override
-  final List<Build> buildsList;
+  final List<BuildModel> buildsList;
 
   factory _$BuildList([void updates(BuildListBuilder b)]) =>
       (new BuildListBuilder()..update(updates)).build();
@@ -105,9 +106,10 @@ class _$BuildList extends BuildList {
 class BuildListBuilder implements Builder<BuildList, BuildListBuilder> {
   _$BuildList _$v;
 
-  List<Build> _buildsList;
-  List<Build> get buildsList => _$this._buildsList;
-  set buildsList(List<Build> buildsList) => _$this._buildsList = buildsList;
+  List<BuildModel> _buildsList;
+  List<BuildModel> get buildsList => _$this._buildsList;
+  set buildsList(List<BuildModel> buildsList) =>
+      _$this._buildsList = buildsList;
 
   BuildListBuilder();
 
