@@ -33,3 +33,4 @@ flutter:
         - asset: assets/fonts/ReemKufi-Regular.ttf
   assets:
     - logo.png
+    - logo2.png
