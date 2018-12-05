@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:travy/travyGlyphs.dart';
-
-import 'package:travy/api/api.dart';
-
-import 'package:travy/screens/aaa.dart';
-
 class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
