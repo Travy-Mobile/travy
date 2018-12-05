@@ -35,16 +35,24 @@ class LoginScreen extends StatelessWidget {
                     padding: EdgeInsets.all(5),
                     child: Row(
                       children: <Widget>[
-                        Image.asset("logo.png", height: 80, width: 80,),
+                        Padding(
+                          padding: EdgeInsets.all(6),
+                          child: Image.asset("logo.png", height: 70, width: 70,),
+                        ),
                         Expanded(
                           child: Padding(
-                            padding: EdgeInsets.only(right: 30),
+                            padding: EdgeInsets.only(left: 30),
                             child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
-                                Text("Travis CI (.com)"),
-                                Text("For open source projects")
+                               Text("Travis CI (.org)", style: TextStyle(
+                                    fontSize: 21
+                                ),),
+                                  Text("For open source projects", style: TextStyle(
+                                    color: Color(int.parse("0xFF666666")),
+                                    fontSize: 15
+                                ),)
                               ],
                             ),
                           )
@@ -64,16 +72,24 @@ class LoginScreen extends StatelessWidget {
                       padding: EdgeInsets.all(5),
                       child: Row(
                         children: <Widget>[
-                          Image.asset("logo2.png", height: 80, width: 80,),
+                          Padding(
+                            padding: EdgeInsets.all(6),
+                            child: Image.asset("logo2.png", height: 70, width: 70,),
+                          ),
                           Expanded(
                             child: Padding(
-                              padding: EdgeInsets.only(right: 30),
+                              padding: EdgeInsets.only(left: 30),
                               child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
-                                  Text("Travis CI (.com)"),
-                                  Text("For private projects")
+                                  Text("Travis CI (.com)", style: TextStyle(
+                                    fontSize: 21
+                                  ),),
+                                  Text("For private projects", style: TextStyle(
+                                    color: Color(int.parse("0xFF666666")),
+                                    fontSize: 15
+                                  ),)
                                 ],
                               ),
                             )
