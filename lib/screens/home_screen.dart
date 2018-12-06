@@ -1,6 +1,5 @@
 /*
- * Author: Bjornskjald, SerekKiri *nie ma nista*
- * O nist przyszedł
+ * Author: Bjornskjald, SerekKiri
  */
 
 import 'package:flutter/material.dart';
