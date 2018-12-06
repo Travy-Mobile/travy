@@ -39,6 +39,9 @@ class _$BuildModelSerializer implements StructuredSerializer<BuildModel> {
       'duration',
       serializers.serialize(object.duration,
           specifiedType: const FullType(int)),
+      'repository',
+      serializers.serialize(object.state,
+          specifiedType: const FullType(String)),
     ];
 
     return result;
@@ -67,6 +70,10 @@ class _$BuildModelSerializer implements StructuredSerializer<BuildModel> {
           result.duration = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
+        case 'repository':
+          result.state = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -81,11 +88,13 @@ class _$BuildModel extends BuildModel {
   final String state;
   @override
   final int duration;
+  @override
+  final String repository;
 
   factory _$BuildModel([void updates(BuildModelBuilder b)]) =>
       (new BuildModelBuilder()..update(updates)).build();
 
-  _$BuildModel._({this.id, this.state, this.duration}) : super._() {
+  _$BuildModel._({this.id, this.state, this.duration, this.repository}) : super._() {
     if (id == null) {
       throw new BuiltValueNullFieldError('BuildModel', 'id');
     }
@@ -94,6 +103,10 @@ class _$BuildModel extends BuildModel {
     }
     if (duration == null) {
       throw new BuiltValueNullFieldError('BuildModel', 'duration');
+    }
+
+    if (repository == null) {
+       throw new BuiltValueNullFieldError('BuildModel', 'repository');
     }
   }
 
@@ -110,7 +123,8 @@ class _$BuildModel extends BuildModel {
     return other is BuildModel &&
         id == other.id &&
         state == other.state &&
-        duration == other.duration;
+        duration == other.duration &&
+        repository == other.repository;
   }
 
   @override
@@ -124,10 +138,15 @@ class _$BuildModel extends BuildModel {
     return (newBuiltValueToStringHelper('BuildModel')
           ..add('id', id)
           ..add('state', state)
-          ..add('duration', duration))
+          ..add('duration', duration)
+          ..add('repository', repository))
         .toString();
   }
-}
+
+  @override
+  // TODO: implement repository
+  String get ddd => null;
+  }
 
 class BuildModelBuilder implements Builder<BuildModel, BuildModelBuilder> {
   _$BuildModel _$v;
@@ -144,6 +163,10 @@ class BuildModelBuilder implements Builder<BuildModel, BuildModelBuilder> {
   int get duration => _$this._duration;
   set duration(int duration) => _$this._duration = duration;
 
+  String _repository;
+  String get repository => _$this._repository;
+  set repository(String repository) => _$this._repository = repository;
+
   BuildModelBuilder();
 
   BuildModelBuilder get _$this {
@@ -151,6 +174,7 @@ class BuildModelBuilder implements Builder<BuildModel, BuildModelBuilder> {
       _id = _$v.id;
       _state = _$v.state;
       _duration = _$v.duration;
+      _repository = _$v.repository;
       _$v = null;
     }
     return this;
@@ -172,7 +196,7 @@ class BuildModelBuilder implements Builder<BuildModel, BuildModelBuilder> {
   @override
   _$BuildModel build() {
     final _$result =
-        _$v ?? new _$BuildModel._(id: id, state: state, duration: duration);
+        _$v ?? new _$BuildModel._(id: id, state: state, duration: duration, repository: repository);
     replace(_$result);
     return _$result;
   }
