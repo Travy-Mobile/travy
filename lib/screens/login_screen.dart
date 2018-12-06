@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'screens.dart';
+
 class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -28,7 +30,13 @@ class LoginScreen extends StatelessWidget {
                 ),),
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) {
+                      return LoginFormScreen();
+                    }
+                  ));
+                },
                 child: Card(
                   margin: EdgeInsets.only(left: 10, right: 10),
                   child: Padding(
@@ -65,7 +73,13 @@ class LoginScreen extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(top: 5),
                 child: GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(
+                    builder: (context) {
+                      return LoginFormScreen();
+                    }
+                  ));
+                  },
                   child: Card(
                     margin: EdgeInsets.only(left: 10, right: 10),
                     child: Padding(
