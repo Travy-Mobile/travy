@@ -3,6 +3,7 @@ import 'package:travy/models/build.dart';
 
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Api {
   
@@ -17,6 +18,10 @@ class Api {
     var decoded = json.decode(response.body);
   }
 
+  logIn(String token) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.setString("token", token);
+  }
 }
 
 final api = Api();
