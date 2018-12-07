@@ -20,7 +20,7 @@ dev_dependencies:
   flutter_launcher_icons: ^0.7.0
   build_runner: ^1.0.0
   built_value_generator: ^6.1.4
-
+  shared_preferences: ^0.4.3
 flutter:
 
   uses-material-design: true
@@ -31,6 +31,10 @@ flutter:
     - family: ReemKufi
       fonts: 
         - asset: assets/fonts/ReemKufi-Regular.ttf
+    - family: Roboto
+      fonts: 
+        - asset: assets/fonts/Roboto-Regular.ttf
   assets:
     - logo.png
     - logo2.png
+    - travis_eps.eps
