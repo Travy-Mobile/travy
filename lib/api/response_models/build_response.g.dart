@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'build.dart';
+part of 'build_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
@@ -19,16 +19,17 @@ part of 'build.dart';
 // ignore_for_file: unnecessary_new
 // ignore_for_file: test_types_in_equals
 
-Serializer<BuildModel> _$buildModelSerializer = new _$BuildModelSerializer();
+Serializer<BuildResponse> _$buildResponseSerializer =
+    new _$BuildResponseSerializer();
 
-class _$BuildModelSerializer implements StructuredSerializer<BuildModel> {
+class _$BuildResponseSerializer implements StructuredSerializer<BuildResponse> {
   @override
-  final Iterable<Type> types = const [BuildModel, _$BuildModel];
+  final Iterable<Type> types = const [BuildResponse, _$BuildResponse];
   @override
-  final String wireName = 'BuildModel';
+  final String wireName = 'BuildResponse';
 
   @override
-  Iterable serialize(Serializers serializers, BuildModel object,
+  Iterable serialize(Serializers serializers, BuildResponse object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[
       'id',
@@ -48,9 +49,9 @@ class _$BuildModelSerializer implements StructuredSerializer<BuildModel> {
   }
 
   @override
-  BuildModel deserialize(Serializers serializers, Iterable serialized,
+  BuildResponse deserialize(Serializers serializers, Iterable serialized,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = new BuildModelBuilder();
+    final result = new BuildResponseBuilder();
 
     final iterator = serialized.iterator;
     while (iterator.moveNext()) {
@@ -81,7 +82,7 @@ class _$BuildModelSerializer implements StructuredSerializer<BuildModel> {
   }
 }
 
-class _$BuildModel extends BuildModel {
+class _$BuildResponse extends BuildResponse {
   @override
   final int id;
   @override
@@ -91,36 +92,36 @@ class _$BuildModel extends BuildModel {
   @override
   final int duration;
 
-  factory _$BuildModel([void updates(BuildModelBuilder b)]) =>
-      (new BuildModelBuilder()..update(updates)).build();
+  factory _$BuildResponse([void updates(BuildResponseBuilder b)]) =>
+      (new BuildResponseBuilder()..update(updates)).build();
 
-  _$BuildModel._({this.id, this.state, this.repository, this.duration})
+  _$BuildResponse._({this.id, this.state, this.repository, this.duration})
       : super._() {
     if (id == null) {
-      throw new BuiltValueNullFieldError('BuildModel', 'id');
+      throw new BuiltValueNullFieldError('BuildResponse', 'id');
     }
     if (state == null) {
-      throw new BuiltValueNullFieldError('BuildModel', 'state');
+      throw new BuiltValueNullFieldError('BuildResponse', 'state');
     }
     if (repository == null) {
-      throw new BuiltValueNullFieldError('BuildModel', 'repository');
+      throw new BuiltValueNullFieldError('BuildResponse', 'repository');
     }
     if (duration == null) {
-      throw new BuiltValueNullFieldError('BuildModel', 'duration');
+      throw new BuiltValueNullFieldError('BuildResponse', 'duration');
     }
   }
 
   @override
-  BuildModel rebuild(void updates(BuildModelBuilder b)) =>
+  BuildResponse rebuild(void updates(BuildResponseBuilder b)) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  BuildModelBuilder toBuilder() => new BuildModelBuilder()..replace(this);
+  BuildResponseBuilder toBuilder() => new BuildResponseBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is BuildModel &&
+    return other is BuildResponse &&
         id == other.id &&
         state == other.state &&
         repository == other.repository &&
@@ -136,7 +137,7 @@ class _$BuildModel extends BuildModel {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('BuildModel')
+    return (newBuiltValueToStringHelper('BuildResponse')
           ..add('id', id)
           ..add('state', state)
           ..add('repository', repository)
@@ -145,8 +146,9 @@ class _$BuildModel extends BuildModel {
   }
 }
 
-class BuildModelBuilder implements Builder<BuildModel, BuildModelBuilder> {
-  _$BuildModel _$v;
+class BuildResponseBuilder
+    implements Builder<BuildResponse, BuildResponseBuilder> {
+  _$BuildResponse _$v;
 
   int _id;
   int get id => _$this._id;
@@ -164,9 +166,9 @@ class BuildModelBuilder implements Builder<BuildModel, BuildModelBuilder> {
   int get duration => _$this._duration;
   set duration(int duration) => _$this._duration = duration;
 
-  BuildModelBuilder();
+  BuildResponseBuilder();
 
-  BuildModelBuilder get _$this {
+  BuildResponseBuilder get _$this {
     if (_$v != null) {
       _id = _$v.id;
       _state = _$v.state;
@@ -178,22 +180,22 @@ class BuildModelBuilder implements Builder<BuildModel, BuildModelBuilder> {
   }
 
   @override
-  void replace(BuildModel other) {
+  void replace(BuildResponse other) {
     if (other == null) {
       throw new ArgumentError.notNull('other');
     }
-    _$v = other as _$BuildModel;
+    _$v = other as _$BuildResponse;
   }
 
   @override
-  void update(void updates(BuildModelBuilder b)) {
+  void update(void updates(BuildResponseBuilder b)) {
     if (updates != null) updates(this);
   }
 
   @override
-  _$BuildModel build() {
+  _$BuildResponse build() {
     final _$result = _$v ??
-        new _$BuildModel._(
+        new _$BuildResponse._(
             id: id, state: state, repository: repository, duration: duration);
     replace(_$result);
     return _$result;

@@ -1,4 +1,8 @@
-import 'package:http/http.dart';
+export 'recources/api_resources.dart';
+export 'response_models/build_response.dart';
+export 'client.dart';
+export 'normalizers.dart';
+
 import 'package:travy/models/build.dart';
 
 import 'package:http/http.dart' as http;
@@ -7,11 +11,13 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class Api {
   
-  Future<List<BuildModel>> fetchBuilds() async{
+  Future<List<BuildModel>> fetchBuilds(String token) async{
+    var prefs = await SharedPreferences.getInstance();
+    var token = prefs.getString("token");
     String url = "https://api.travis-ci.org/builds";
     
     var response = await http.get(url, headers: {
-      "Authorization": "token xxx",
+      "Authorization": "token ${token}",
       "Travis-API-Version": "3"
     });
 
